@@ -41,6 +41,7 @@ platforms:
         profiles:
         - default
         - ovn
+        - ovn-scale-targets
       - name: azure
         profiles:
         - default

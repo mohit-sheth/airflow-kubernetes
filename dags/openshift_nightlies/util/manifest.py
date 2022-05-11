@@ -27,10 +27,16 @@ class Manifest():
             payload = response.json()
             latest_accepted_release = payload["name"]
             latest_accepted_release_url = payload["downloadURL"]
-            self.latest_releases[stream] = {
-                "openshift_client_location": f"{latest_accepted_release_url}/openshift-client-linux-{latest_accepted_release}.tar.gz",
-                "openshift_install_binary_url": f"{latest_accepted_release_url}/openshift-install-linux-{latest_accepted_release}.tar.gz"
-            }
+            if stream == "4.7.0-0.nightly":
+                self.latest_releases[stream] = {
+                    "openshift_client_location": "https://openshift-release-artifacts.apps.ci.l2s4.p1.openshiftapps.com/4.7.50/openshift-client-linux-4.7.50.tar.gz",
+                    "openshift_install_binary_url": "https://openshift-release-artifacts.apps.ci.l2s4.p1.openshiftapps.com/4.7.50/openshift-install-linux-4.7.50.tar.gz"
+                }
+            else:
+                self.latest_releases[stream] = {
+                    "openshift_client_location": f"{latest_accepted_release_url}/openshift-client-linux-{latest_accepted_release}.tar.gz",
+                    "openshift_install_binary_url": f"{latest_accepted_release_url}/openshift-install-linux-{latest_accepted_release}.tar.gz"
+                }
                 
 
     def get_cloud_releases(self):

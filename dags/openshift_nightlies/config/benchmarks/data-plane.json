@@ -44,7 +44,7 @@
                 "LATENCY_TOLERANCE": "10",
                 "LARGE_SCALE_THRESHOLD": "19",
                 "ENGINE": "local",
-                "LARGE_SCALE_ROUTES": "500",
+                "LARGE_SCALE_ROUTES": "400",
                 "COMPARE": "false",
                 "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
                 "GSHEET_KEY_LOCATION": "/tmp/key.json"

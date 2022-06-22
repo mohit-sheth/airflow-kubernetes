@@ -76,10 +76,6 @@ platforms:
       config: 
         install: ovn-large.json
         benchmarks: large-control-plane.json
-    - name: acs
-      config: 
-        install: acs.json
-        benchmarks: acs.json
 
   baremetal: 
     build: dev
@@ -91,15 +87,11 @@ platforms:
         benchmarks: baremetal-benchmarks
 
   openstack:
-    versions: [4.9, "4.10"]
+    versions: ["4.10"]
     variants:
       - name: sdn
         config:
           install: openstack/sdn.json
-          benchmarks: openstack.json
-      - name: kuryr
-        config:
-          install: openstack/kuryr.json
           benchmarks: openstack.json
 
 # Do not program concurrent builds of ROSA/ROGCP/ARO

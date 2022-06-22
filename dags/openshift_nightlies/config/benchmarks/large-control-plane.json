@@ -1,74 +1,76 @@
 {
     "benchmarks": [
         {
-            "name": "scale-27",
-            "workload": "scale-perf",
-            "command": "./run_scale_fromgit.sh",
+            "name": "node-density",
+            "workload": "kube-burner",
+            "command": "./run.sh",
             "env": {
-                "SCALE": "27",
-                "METADATA_COLLECTION": "false",
-                "WORKLOAD_NODE_ROLE": "workload"
+                "WORKLOAD": "node-density",
+                "PODS_PER_NODE": "245",
+                "NODE_COUNT": "250",
+                "JOB_TIMEOUT": "18000",
+                "QPS": "20",
+                "BURST": "20",
+                "STEP_SIZE": "30s",
+                "LOG_LEVEL": "info",
+                "LOG_STREAMING": "true",
+                "CLEANUP_WHEN_FINISH": "true",
+                "CLEANUP": "true",
+                "MUST_GATHER_EACH_TASK": "true",
+                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }",
+		"METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
+		"GSHEET_KEY_LOCATION": "/root/.secrets/gsheet_key.json",
+		"EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
+		"COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json"
             }
         },
         {
-            "name": "scale-120",
-            "workload": "scale-perf",
-            "command": "./run_scale_fromgit.sh",
+            "name": "node-density-cni",
+            "workload": "kube-burner",
+            "trigger_rule": "all_done",
+            "command": "./run.sh",
             "env": {
-                "SCALE": "120",
-                "METADATA_COLLECTION": "false",
-                "WORKLOAD_NODE_ROLE": "workload"
-            }
-        },
-        {
-            "name": "scale-252",
-            "workload": "scale-perf",
-            "command": "./run_scale_fromgit.sh",
-            "env": {
-                "SCALE": "252",
-                "METADATA_COLLECTION": "false",
-                "WORKLOAD_NODE_ROLE": "workload"
+                "WORKLOAD": "node-density-cni",
+                "PODS_PER_NODE": "45",
+                "NODE_COUNT": "250",
+                "JOB_TIMEOUT": "18000",
+                "QPS": "20",
+                "BURST": "20",
+                "STEP_SIZE": "30s",
+                "LOG_LEVEL": "info",
+                "LOG_STREAMING": "true",
+                "CLEANUP_WHEN_FINISH": "true",
+                "CLEANUP": "true",
+                "MUST_GATHER_EACH_TASK": "true",
+                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }",
+                "METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
+                "GSHEET_KEY_LOCATION": "/root/.secrets/gsheet_key.json",
+                "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
+                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json"
             }
         },
         {
             "name": "cluster-density",
             "workload": "kube-burner",
+            "trigger_rule": "all_done",
             "command": "./run.sh",
             "env": {
                 "WORKLOAD": "cluster-density",
                 "JOB_ITERATIONS": "4000",
                 "JOB_TIMEOUT": "18000",
-                "STEP_SIZE": "2m",
+                "STEP_SIZE": "30s",
                 "QPS": "20",
                 "BURST": "20",
                 "LOG_LEVEL": "info",
+                "LOG_STREAMING": "true",
                 "CLEANUP_WHEN_FINISH": "true",
                 "CLEANUP": "true",
                 "MUST_GATHER_EACH_TASK": "true",
-                "CLEANUP_TIMEOUT": "2h",
-                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }"
-            }
-        },
-        {
-            "name": "node-density",
-            "workload": "kube-burner",
-            "trigger_rule": "all_done",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "node-density",
-                "PODS_PER_NODE": "245",
-                "NODE_COUNT": "252",
-                "JOB_TIMEOUT": "18000",
-                "QPS": "20",
-                "BURST": "20",
-                "STEP_SIZE": "2m",
-                "LOG_LEVEL": "info",
-                "CLEANUP_WHEN_FINISH": "true",
-                "CLEANUP": "true",
-                "MUST_GATHER_EACH_TASK": "true",
-                "CLEANUP_TIMEOUT": "2h",
-                "METRICS_PROFILE": "metrics-profiles/metrics-aggregated.yaml",
-                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }"
+                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }",
+                "METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
+                "GSHEET_KEY_LOCATION": "/root/.secrets/gsheet_key.json",
+                "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
+                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json"
             }
         }
     ]

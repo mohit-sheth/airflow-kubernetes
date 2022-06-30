@@ -23,8 +23,8 @@ dagConfig:
     tag: 2.3.1
   dependencies:
     e2e_benchmarking:
-      repo: https://github.com/mohit-sheth/e2e-benchmarking.git
-      branch: ovn-sheet
+      repo: https://github.com/cloud-bulldozer/e2e-benchmarking.git
+      branch: master
 
 platforms:
   cloud:

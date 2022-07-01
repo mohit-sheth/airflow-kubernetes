@@ -26,7 +26,11 @@
                 "CLEANUP_WHEN_FINISH": "true",
                 "CLEANUP": "true",
                 "MUST_GATHER_EACH_TASK": "true",
-                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }"
+                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }",
+                "METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
+                "GSHEET_KEY_LOCATION": "/root/.secrets/gsheet_key.json",
+                "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
+                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json"
             }
         },
         {
@@ -47,7 +51,11 @@
                 "CLEANUP": "true",
                 "MUST_GATHER_EACH_TASK": "true",
                 "CLEANUP_TIMEOUT": "1h",
-                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }"
+                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }",
+                "METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
+                "GSHEET_KEY_LOCATION": "/root/.secrets/gsheet_key.json",
+                "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
+                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json"
             }
         },
         {
@@ -67,7 +75,11 @@
                 "CLEANUP_WHEN_FINISH": "true",
                 "CLEANUP": "true",
                 "MUST_GATHER_EACH_TASK": "true",
-                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }"
+                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }",
+                "METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
+                "GSHEET_KEY_LOCATION": "/root/.secrets/gsheet_key.json",
+                "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
+                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json"
             }
         },
         {
@@ -87,7 +99,11 @@
                 "CLEANUP_WHEN_FINISH": "true",
                 "CLEANUP": "true",
                 "MUST_GATHER_EACH_TASK": "true",
-                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }"
+                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }",
+                "METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
+                "GSHEET_KEY_LOCATION": "/root/.secrets/gsheet_key.json",
+                "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
+                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json"
             }
         }
     ]

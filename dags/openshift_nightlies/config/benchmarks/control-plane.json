@@ -30,7 +30,8 @@
                 "METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
                 "GSHEET_KEY_LOCATION": "/root/.secrets/gsheet_key.json",
                 "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
-                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json"
+                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json",
+                "ERROR_ON_VERIFY": "false"
             }
         },
         {
@@ -55,7 +56,8 @@
                 "METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
                 "GSHEET_KEY_LOCATION": "/root/.secrets/gsheet_key.json",
                 "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
-                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json"
+                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json",
+                "ERROR_ON_VERIFY": "false"
             }
         },
         {
@@ -79,7 +81,8 @@
                 "METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
                 "GSHEET_KEY_LOCATION": "/root/.secrets/gsheet_key.json",
                 "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
-                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json"
+                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json",
+                "ERROR_ON_VERIFY": "false"
             }
         },
         {
@@ -103,7 +106,8 @@
                 "METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
                 "GSHEET_KEY_LOCATION": "/root/.secrets/gsheet_key.json",
                 "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
-                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json"
+                "COMPARISON_CONFIG": "clusterVersion.json podLatency.json podCPU-avg.json podCPU-max.json podMemory-avg.json podMemory-max.json",
+                "ERROR_ON_VERIFY": "false"
             }
         }
     ]

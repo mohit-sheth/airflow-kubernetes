@@ -9,7 +9,7 @@ versions:
   baremetalReleaseStream: latest-4.10
 - version: 4.11
   alias: next
-  releaseStream: 4.11.0-0.nightly
+  releaseStream: 4-stable
   baremetalReleaseStream: latest-4.11
 
 dagConfig:

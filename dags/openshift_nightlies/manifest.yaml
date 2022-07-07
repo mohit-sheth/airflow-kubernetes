@@ -29,7 +29,7 @@ dagConfig:
 platforms:
   cloud:
     versions: ["4.10", 4.11]
-    providers: ["aws", "gcp", "azure", "alibaba"]
+    providers: ["aws"]
     variants: 
     - name: sdn-control-plane
       schedule: "0 12 * * 3"
@@ -80,6 +80,10 @@ platforms:
       config: 
         install: acs.json
         benchmarks: acs.json
+    - name: router
+      config:
+        install: sdn.json
+        benchmarks: router.json
 
   baremetal: 
     build: dev

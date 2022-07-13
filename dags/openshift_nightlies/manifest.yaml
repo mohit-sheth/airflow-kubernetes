@@ -84,6 +84,14 @@ platforms:
       config:
         install: sdn.json
         benchmarks: router.json
+    - name: sdn-upgrade
+      config:
+        install: sdn.json
+        benchmarks: upgrade_cloud.json
+    - name: ovn-upgrade
+      config:
+        install: ovn.json
+        benchmarks: upgrade_cloud.json
 
   baremetal: 
     build: dev

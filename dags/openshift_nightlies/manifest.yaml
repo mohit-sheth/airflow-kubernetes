@@ -92,6 +92,10 @@ platforms:
       config:
         install: ovn.json
         benchmarks: upgrade_cloud.json
+    - name: ovn-upgrade-120
+      config:
+        install: ovn.json
+        benchmarks: upgrade_cloud-120.json
 
   baremetal: 
     build: dev

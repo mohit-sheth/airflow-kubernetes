@@ -48,7 +48,7 @@
                 "CLEANUP_TIMEOUT": "2h",
                 "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }",
                 "METRICS_PROFILE": "metrics-profiles/metrics-aggregated.yaml",
-                "ERROR_ON_VERIFY": "false"
+                "ERROR_ON_VERIFY": "true"
             }
         },
         {
@@ -71,7 +71,7 @@
                 "CLEANUP_TIMEOUT": "2h",
                 "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }",
                 "METRICS_PROFILE": "metrics-profiles/metrics-ovn.yaml",
-                "ERROR_ON_VERIFY": "false"
+                "ERROR_ON_VERIFY": "true"
             }
         }
     ]

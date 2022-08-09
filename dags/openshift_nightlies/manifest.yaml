@@ -29,7 +29,7 @@ dagConfig:
 platforms:
   cloud:
     versions: ["4.11", "4.12"]
-    providers: ["aws", "aws-arm", "gcp", "azure", "alibaba"]
+    providers: ["aws"]
     variants:
     - name: sdn-control-plane
       schedule: "0 12 * * 3"
@@ -76,10 +76,116 @@ platforms:
       config: 
         install: ovn-large.json
         benchmarks: large-control-plane.json
-    - name: acs
-      config: 
-        install: acs.json
-        benchmarks: acs.json
+    - name: 20-SDN-ND
+      schedule: "0 12 * * 3"
+      config:
+        install: sdn.json
+        benchmarks: 20-node-density.json
+    - name: 120-sdn-nd
+      schedule: "0 12 * * 3"
+      config:
+        install: sdn-medium.json
+        benchmarks: 120-node-density.json
+    - name: 250-sdn-nd
+      schedule: "0 12 * * 3"
+      config:
+        install: sdn-large.json
+        benchmarks: 250-node-density.json
+    - name: 20-sdn-ndcni
+      schedule: "0 12 * * 3"
+      config:
+        install: sdn.json
+        benchmarks: 20-node-density-CNI.json
+    - name: 120-sdn-ndcni
+      schedule: "0 12 * * 3"
+      config:
+        install: sdn-medium.json
+        benchmarks: 120-node-density-CNI.json
+    - name: 250-sdn-ndcni
+      schedule: "0 12 * * 3"
+      config:
+        install: sdn-large.json
+        benchmarks: 250-node-density-CNI.json
+    - name: 20-sdn-ndh
+      schedule: "0 12 * * 3"
+      config:
+        install: sdn.json
+        benchmarks: 20-node-density-heavy.json
+    - name: 120-sdn-ndh
+      schedule: "0 12 * * 3"
+      config:
+        install: sdn-medium.json
+        benchmarks: 120-node-density-heavy.json
+    - name: 20-sdn-cd
+      schedule: "0 12 * * 3"
+      config:
+        install: sdn.json
+        benchmarks: 20-cluster-density.json
+    - name: 120-sdn-cd
+      schedule: "0 12 * * 3"
+      config:
+        install: sdn-medium.json
+        benchmarks: 120-cluster-density.json
+    - name: 250-sdn-cd
+      schedule: "0 12 * * 3"
+      config:
+        install: sdn-large.json
+        benchmarks: 250-cluster-density.json
+    - name: 20-ovn-nd
+      schedule: "0 12 * * 3"
+      config:
+        install: ovn.json
+        benchmarks: 20-node-density.json
+    - name: 120-ovn-nd
+      schedule: "0 12 * * 3"
+      config:
+        install: ovn-medium.json
+        benchmarks: 120-node-density.json
+    - name: 250-ovn-nd
+      schedule: "0 12 * * 3"
+      config:
+        install: ovn-large.json
+        benchmarks: 250-node-density.json
+    - name: 20-ovn-ndcni
+      schedule: "0 12 * * 3"
+      config:
+        install: ovn.json
+        benchmarks: 20-node-density-CNI.json
+    - name: 120-ovn-ndcni
+      schedule: "0 12 * * 3"
+      config:
+        install: ovn-medium.json
+        benchmarks: 120-node-density-CNI.json
+    - name: 250-ovn-ndcni
+      schedule: "0 12 * * 3"
+      config:
+        install: ovn-large.json
+        benchmarks: 250-node-density-CNI.json
+    - name: 20-ovn-ndh
+      schedule: "0 12 * * 3"
+      config:
+        install: ovn.json
+        benchmarks: 20-node-density-heavy.json
+    - name: 120-ovn-ndh
+      schedule: "0 12 * * 3"
+      config:
+        install: ovn-medium.json
+        benchmarks: 120-node-density-heavy.json
+    - name: 20-ovn-cd
+      schedule: "0 12 * * 3"
+      config:
+        install: ovn.json
+        benchmarks: 20-cluster-density.json
+    - name: 120-ovn-cd
+      schedule: "0 12 * * 3"
+      config:
+        install: ovn-medium.json
+        benchmarks: 120-cluster-density.json
+    - name: 250-ovn-cd
+      schedule: "0 12 * * 3"
+      config:
+        install: ovn-large.json
+        benchmarks: 250-cluster-density.json
 
   baremetal: 
     build: dev

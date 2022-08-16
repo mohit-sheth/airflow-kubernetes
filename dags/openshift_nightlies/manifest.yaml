@@ -186,6 +186,18 @@ platforms:
       config:
         install: ovn-large.json
         benchmarks: 250-cluster-density.json
+    - name: sdn-upgrade
+      config:
+        install: sdn-upgrade.json
+        benchmarks: upgrade-250.json
+    - name: ovn-upgrade
+      config:
+        install: ovn-upgrade.json
+        benchmarks: upgrade-250.json
+    - name: ovn-upgrade-120
+      config:
+        install: ovn-upgrade.json
+        benchmarks: upgrade-120.json
 
   baremetal: 
     build: dev

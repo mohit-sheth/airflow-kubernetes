@@ -198,6 +198,10 @@ platforms:
       config:
         install: ovn-upgrade.json
         benchmarks: upgrade-120.json
+    - name: ovn-200
+      config:
+        install: ovn-large.json
+        benchmarks: 200-node-density.json
 
   baremetal: 
     build: dev

@@ -202,6 +202,18 @@ platforms:
       config:
         install: ovn-large.json
         benchmarks: 200-node-density.json
+    - name: 20-ovn-netpol
+      config:
+        install: ovn-medium.json
+        benchmarks: 120-netpol.json
+    - name: 120-sdn-netpol
+      config:
+        install: sdn-medium.json
+        benchmarks: 120-netpol.json
+    - name: 120-ovn-prs
+      config:
+        install: ovn-medium.json
+        benchmarks: 120-prs.json
 
   baremetal: 
     build: dev

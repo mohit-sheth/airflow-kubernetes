@@ -214,6 +214,10 @@ platforms:
       config:
         install: ovn-medium.json
         benchmarks: 120-prs.json
+    - name: acs
+      config: 
+        install: acs.json
+        benchmarks: acs.json
 
   baremetal: 
     build: dev

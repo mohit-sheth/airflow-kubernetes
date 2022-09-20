@@ -34,5 +34,7 @@
   "ipv6_enabled": false,
   "ipv4_provisioning": true,
   "ipv4_baremetal": false,
-  "dualstack_baremetal": false
+  "dualstack_baremetal": false,
+  "control_plane_hardware_type": "r640",
+  "workers_hardware_type": "5039ms"
 }

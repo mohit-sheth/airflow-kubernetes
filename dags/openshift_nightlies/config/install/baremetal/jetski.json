@@ -36,5 +36,6 @@
   "ipv4_baremetal": false,
   "dualstack_baremetal": false,
   "control_plane_hardware_type": "r640",
-  "workers_hardware_type": "5039ms"
+  "workers_hardware_type": "5039ms",
+  "post_install": true
 }

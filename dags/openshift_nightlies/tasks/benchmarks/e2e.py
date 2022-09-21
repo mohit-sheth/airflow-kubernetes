@@ -130,7 +130,7 @@ class E2EBenchmarks():
         else:
             cmd = f"{constants.root_dag_dir}/scripts/run_benchmark.sh -w {benchmark['workload']} -c {benchmark['command']} "
         task = BashOperator(
-                task_id=f"{benchmark['name']}",
+                task_id=f"{task_prefix if self.task_group != 'benchmarks' else ''}{benchmark['name']}",
                 depends_on_past=False,
                 bash_command=cmd,
                 retries=0,

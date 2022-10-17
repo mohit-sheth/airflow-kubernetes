@@ -6,7 +6,13 @@
             "command": "./run.sh",
             "env": {
                 "WORKLOAD": "hostnet",
-                "PAIRS": "1"
+                "PAIRS": "1",
+		"GEN_CSV": "true",
+		"EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
+		"COMPARISON_CONFIG": "uperf-touchstone.json",
+		"TOLERANCY_RULES_CFG": "uperf-tolerancy-rules.yaml",
+		"GSHEET_KEY_LOCATION": "/tmp/key.json",
+		"COMPARISON_RC": "0"
             }
         },
         {
@@ -14,7 +20,13 @@
             "workload": "network-perf",
             "command": "./run.sh",
             "env": {
-                "WORKLOAD": "pod2pod"
+                "WORKLOAD": "pod2pod",
+                "GEN_CSV": "true",
+                "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
+                "COMPARISON_CONFIG": "uperf-touchstone.json",
+                "TOLERANCY_RULES_CFG": "uperf-tolerancy-rules.yaml",
+                "GSHEET_KEY_LOCATION": "/tmp/key.json",
+                "COMPARISON_RC": "0"
             }
         },
         {
@@ -22,7 +34,13 @@
             "workload": "network-perf",
             "command": "./run.sh",
             "env": {
-                "WORKLOAD": "pod2svc"
+                "WORKLOAD": "pod2svc",
+                "GEN_CSV": "true",
+                "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
+                "COMPARISON_CONFIG": "uperf-touchstone.json",
+                "TOLERANCY_RULES_CFG": "uperf-tolerancy-rules.yaml",
+                "GSHEET_KEY_LOCATION": "/tmp/key.json",
+                "COMPARISON_RC": "0"
             }
         },
         {

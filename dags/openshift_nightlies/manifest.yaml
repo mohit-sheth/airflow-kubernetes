@@ -23,8 +23,8 @@ dagConfig:
     tag: 2.3.2
   dependencies:
     e2e_benchmarking:
-      repo: https://github.com/cloud-bulldozer/e2e-benchmarking.git
-      branch: master
+      repo: https://github.com/mohit-sheth/e2e-benchmarking.git
+      branch: netpol-template
 
 platforms:
   cloud:
@@ -59,7 +59,7 @@ platforms:
     - name: ovn-medium
       schedule: "0 12 * * 1"
       config: 
-        install: ovn-large-cp.json
+        install: ovn-cp.json
         benchmarks: medium-control-plane.json
     - name: sdn-extra-large
       schedule: "0 12 15 * *"
@@ -80,6 +80,11 @@ platforms:
       config: 
         install: acs.json
         benchmarks: acs.json
+    - name: ovn-311
+      schedule: "0 12 15 * *"
+      config:
+        install: ovn-large-cp.json
+        benchmarks: 311.json
 
   baremetal: 
     build: dev

@@ -38,7 +38,7 @@ platforms:
 
   # Do not program concurrent builds of ROSA/ROGCP/ARO
   rosa:
-    versions: ["4.13"]
+    versions: ["4.11", "4.13"]
     variants:
       - name: cp-24 
         schedule: "10 12 * * 3"

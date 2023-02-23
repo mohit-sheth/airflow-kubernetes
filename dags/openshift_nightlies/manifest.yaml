@@ -28,10 +28,10 @@ dagConfig:
 
 platforms:
   cloud:
-    versions: ["4.13"]
+    versions: ["4.11", "4.13"]
     providers: ["aws"]
     variants:
-    - name: ovn-control-plane-custom
+    - name: custom
       config:
         install: ovn-cp.json
         benchmarks: control-plane-custom.json

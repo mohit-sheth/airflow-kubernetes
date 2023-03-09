@@ -1,13 +1,19 @@
 {
     "benchmarks": [
         {
-            "name": "cluster-density4k",
+            "name": "node-density",
+            "workload": "kube-burner",
+            "trigger_rule": "all_done",
+            "custom_cmd": "kube-burner ocp node-density --uuid=${UUID} --pods-per-node=245 --timeout=2h --pod-ready-threshold=5s --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner"
+        },
+        {
+            "name": "cluster-density",
             "workload": "kube-burner",
             "trigger_rule": "all_done",
             "command": "./run.sh",
             "env": {
                 "WORKLOAD": "cluster-density",
-                "JOB_ITERATIONS": "4000",
+                "JOB_ITERATIONS": "1000",
                 "JOB_TIMEOUT": "18000",
                 "QPS": "20",
                 "BURST": "20",
@@ -18,6 +24,12 @@
 		"CHURN": "false",
                 "MUST_GATHER_EACH_TASK": "true"
             }
+        },
+        {
+            "name": "cluster-density-v2",
+            "workload": "kube-burner",
+            "trigger_rule": "all_done",
+            "custom_cmd": "kube-burner ocp cluster-density --uuid=${UUID} --iterations=800 --timeout=3h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner"
         }
     ]
 }

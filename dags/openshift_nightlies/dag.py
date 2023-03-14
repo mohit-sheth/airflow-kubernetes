@@ -104,9 +104,9 @@ class CloudOpenshiftNightlyDAG(AbstractOpenshiftNightlyDAG):
 
         if self.config.cleanup_on_success:
             cleanup_cluster = installer.get_cleanup_task()
-            install_cluster >> connect_to_platform >> benchmarks >> utils >> cleanup_cluster >> final_status
+            install_cluster >> benchmarks >> utils >> cleanup_cluster >> final_status
         else:
-            install_cluster >> connect_to_platform >> benchmarks >> utils
+            install_cluster >> benchmarks >> utils
 
     def _get_openshift_installer(self):
         return openshift.CloudOpenshiftInstaller(self.dag, self.config, self.release)
@@ -180,9 +180,9 @@ class RosaNightlyDAG(AbstractOpenshiftNightlyDAG):
 
         if self.config.cleanup_on_success:
             cleanup_cluster = installer.get_cleanup_task()
-            install_cluster >> rosa_post_installation >> connect_to_platform >> benchmarks >> cleanup_cluster >> final_status
+            install_cluster >> rosa_post_installation >> benchmarks >> cleanup_cluster >> final_status
         else:
-            install_cluster >> rosa_post_installation >> connect_to_platform >> benchmarks
+            install_cluster >> rosa_post_installation >> benchmarks
 
     def _get_openshift_installer(self):
         return rosa.RosaInstaller(self.dag, self.config, self.release)

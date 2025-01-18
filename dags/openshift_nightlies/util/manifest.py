@@ -23,19 +23,19 @@ class Manifest():
         self.latest_releases = {}
         for stream in release_streams:
             # ARM binaries under its own CI.
-            base_url_arm = self.release_stream_base_url.replace("openshift-release",f"openshift-release-{self.ARM64}")
+            base_url_arm = self.release_stream_base_url.replace("amd64", f"{self.ARM64}")
             stream_arm = f"{stream}-{self.ARM64}"
             latest_accepted_release,latest_accepted_release_url = self.request_for_payload(f"{base_url_arm}/{stream_arm}/latest")
             self.latest_releases[stream_arm] = {
                 # Appending "-amd64" seems counterintuitive, but it is correct. Believe me :-)
-                "openshift_client_location": f"{latest_accepted_release_url}/openshift-client-linux-{self.AMD64}-{latest_accepted_release}.tar.gz",
+                "openshift_client_location": f"{latest_accepted_release_url}/openshift-client-linux-{self.AMD64}-rhel8-{latest_accepted_release}.tar.gz",
                 "openshift_install_binary_url": f"{latest_accepted_release_url}/openshift-install-linux-{self.AMD64}-{latest_accepted_release}.tar.gz"
             }
             # All other binaries under the "plain" ci URLs
             url = f"{self.release_stream_base_url}/{stream}/latest"
             latest_accepted_release,latest_accepted_release_url = self.request_for_payload(url)
             self.latest_releases[stream] = {
-                "openshift_client_location": f"{latest_accepted_release_url}/openshift-client-linux-{latest_accepted_release}.tar.gz",
+                "openshift_client_location": f"{latest_accepted_release_url}/openshift-client-linux-amd64-rhel8-{latest_accepted_release}.tar.gz",
                 "openshift_install_binary_url": f"{latest_accepted_release_url}/openshift-install-linux-{latest_accepted_release}.tar.gz"
             }
 
